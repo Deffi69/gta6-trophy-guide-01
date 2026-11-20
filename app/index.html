@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An unofficial, offline guide and tracker for all 55 PlayStation 5 trophies in Grand Theft Auto VI: roadmap to the Platinum, missable warnings, spoiler-safe checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Unofficial fan guide &middot; PlayStation 5 &middot; Offline</p>
+    <h1>Leonida Legend</h1>
+    <p class="sub">Every one of GTA VI&rsquo;s 55 trophies — the official names, descriptions and grades, a plain-words guide for each with its source, a road to the Platinum, and a checklist that remembers your progress.</p>
+    <div class="progress-wrap" role="status" aria-live="polite">
+      <div class="progress-line"><strong id="progressText">0 of 55 earned</strong><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill" style="width:0%"></div></div>
+      <div class="grade-counts" id="gradeCounts"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="warn" id="missableBanner">
+    <strong>&#9888; One trophy can be missed.</strong>
+    <span><b>Positive Mental Attitude</b> needs Lucia&rsquo;s balcony meditation in Chapter&nbsp;1, which disappears when the chapter ends. There is no mission replay — keep a manual save at the start of every chapter and one before the final mission. Everything else can be finished after the story.</span>
+  </section>
+
+  <section class="roadmap" id="roadmap">
+    <h2>Road to the Platinum</h2>
+    <p class="roadmap-intro">Roughly 200 hours all in, say the early guides. No online trophies, no difficulty trophies, no mission medals — the cost is time, not skill. Work the stages in order; anything outside the story stays open after the credits.</p>
+    <ol class="stages" id="stages"></ol>
+    <p class="fineprint">The 100% checklist appears only after the story, under Progress &gt; Stats &gt; 100% Completion — but progress you made earlier still counts. Never use cheats on your trophy save: they switch trophies and saving off.</p>
+  </section>
+
+  <section class="controls" aria-label="Tracker controls">
+    <div class="control-row">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy name or guide word&hellip;" autocomplete="off"></label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="robbery">Robberies</option>
+          <option value="exploration">Exploration</option>
+          <option value="combat">Combat</option>
+          <option value="side">Stranger missions</option>
+          <option value="completion">Completion</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="status">
+          <option value="all">Earned &amp; remaining</option>
+          <option value="earned">Earned only</option>
+          <option value="remaining">Remaining only</option>
+        </select>
+      </label>
+    </div>
+    <div class="control-row">
+      <label class="toggle"><input id="spoilers" type="checkbox" checked> Hide story spoilers <span class="hint">story trophy names &amp; details stay hidden until you earn them</span></label>
+      <div class="actions">
+        <button id="export" type="button">Export progress</button>
+        <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+        <button id="reset" type="button">Reset</button>
+      </div>
+    </div>
+    <p class="showing" id="showing"></p>
+  </section>
+
+  <section id="list" aria-live="polite"></section>
+  <p class="empty" id="empty" hidden>No trophies match these filters. <span id="emptyNote"></span></p>
+
+  <section class="sources">
+    <h2>Sources &amp; honesty notes</h2>
+    <p>Trophy names, descriptions and grades are shown exactly as PlayStation publishes them. The guides are written in our own words for this page, and each one names the source its facts come from — a source is cited, never copied. Rockstar Games has not published an official trophy list of its own; the list below is the PlayStation list as collected by PSNProfiles and TrueAchievements. Where the guides disagree or a step is still unconfirmed, the guide says so instead of guessing.</p>
+    <ul id="sourceList"></ul>
+    <p class="fineprint">Unofficial fan project. Not affiliated with, endorsed by, or connected to Rockstar Games, Take-Two Interactive, Sony Interactive Entertainment, or PlayStation. Grand Theft Auto and GTA are trademarks of Take-Two Interactive. No official artwork, logos, or game screenshots are used here; the design is our own.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Legend — an offline GTA VI trophy guide &amp; tracker. Progress is stored only in your browser (localStorage) and never leaves your device.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
